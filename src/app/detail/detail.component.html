@@ -1,0 +1,18 @@
+<div style="display:flex; flex-direction: column; height:200px; margin-top: 20px; padding: 20px; border: solid 1px cadetblue">
+  <button class="btn btn-primary"
+          (click)="onDetailClick()">
+    Display Detail
+  </button>
+  <div style="margin-top: 20px; background: bisque"
+       *ngIf="showDetail">
+    <p>Secret detail</p>
+  </div>
+
+
+</div>
+
+<p *ngFor="let click of clicked; let index = index"
+   [ngStyle]="{backgroundColor: index >=5 && '#0066ff'}"
+   [ngClass]="{big:index >= 5}"
+> Click {{click}}</p>
+
